@@ -972,6 +972,226 @@ const serviceDetails = {
                 <li>Change Failure Rate - Percentage of deployments causing failures</li>
             </ul>
         `
+    },
+    'ai-engineering': {
+        title: 'AI Engineering',
+        video: {
+            title: 'AI Engineering Full Course - Build AI Systems',
+            duration: '12:00:00',
+            description: 'Complete guide to building production-ready AI systems and machine learning models',
+            embedId: 'aircAruvnKk'
+        },
+        notes: `
+            <h4>Complete AI Engineering Guide</h4>
+            <p>AI Engineering is the discipline of designing, building, and deploying production-ready artificial intelligence systems. It combines machine learning expertise with software engineering best practices to create scalable, reliable, and maintainable AI solutions that solve real-world problems.</p>
+            
+            <h4>Core AI Engineering Concepts:</h4>
+            <ul>
+                <li><strong>Machine Learning Fundamentals:</strong>
+                    <ul>
+                        <li>Supervised Learning (Classification, Regression)</li>
+                        <li>Unsupervised Learning (Clustering, Dimensionality Reduction)</li>
+                        <li>Reinforcement Learning (Q-Learning, Policy Gradients)</li>
+                        <li>Deep Learning (Neural Networks, CNNs, RNNs, Transformers)</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Model Development Lifecycle:</strong>
+                    <ul>
+                        <li>Problem Definition & Data Collection</li>
+                        <li>Data Preprocessing & Feature Engineering</li>
+                        <li>Model Training & Hyperparameter Tuning</li>
+                        <li>Model Evaluation & Validation</li>
+                        <li>Model Deployment & Monitoring</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Deep Learning Frameworks:</strong>
+                    <ul>
+                        <li>TensorFlow & Keras - Google's deep learning framework</li>
+                        <li>PyTorch - Facebook's research-oriented framework</li>
+                        <li>JAX - Google's high-performance ML framework</li>
+                        <li>ONNX - Open Neural Network Exchange format</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>AI System Architecture:</h4>
+            <ul>
+                <li><strong>Data Pipeline:</strong> ETL processes, data validation, feature stores</li>
+                <li><strong>Model Serving:</strong> REST APIs, gRPC, batch inference, real-time inference</li>
+                <li><strong>Model Versioning:</strong> MLflow, DVC, model registries</li>
+                <li><strong>Monitoring:</strong> Model drift detection, performance metrics, A/B testing</li>
+                <li><strong>Infrastructure:</strong> GPU clusters, distributed training, edge deployment</li>
+            </ul>
+            
+            <h4>Production AI Best Practices:</h4>
+            <ul>
+                <li>Implement proper error handling and fallback mechanisms</li>
+                <li>Monitor model performance and data drift</li>
+                <li>Version control models, data, and code</li>
+                <li>Implement CI/CD for ML pipelines</li>
+                <li>Ensure model interpretability and explainability</li>
+                <li>Handle bias and fairness in AI systems</li>
+                <li>Optimize for inference speed and cost</li>
+            </ul>
+        `
+    },
+    'ml-data-science': {
+        title: 'Machine Learning & Data Science',
+        video: {
+            title: 'Machine Learning & Data Science Full Course',
+            duration: '11:30:00',
+            description: 'Complete machine learning and data science tutorial with hands-on projects',
+            embedId: 'i_LwzRVD7QE'
+        },
+        notes: `
+            <h4>Complete Machine Learning & Data Science Guide</h4>
+            <p>Data Science combines statistics, programming, and domain expertise to extract insights from data. Machine Learning uses algorithms to learn patterns from data and make predictions. Together, they form a powerful toolkit for solving complex problems and driving data-driven decisions.</p>
+            
+            <h4>Data Science Workflow:</h4>
+            <ul>
+                <li><strong>Data Collection:</strong> APIs, databases, web scraping, sensors</li>
+                <li><strong>Data Cleaning:</strong> Handling missing values, outliers, duplicates</li>
+                <li><strong>Exploratory Data Analysis (EDA):</strong> Visualizations, statistical summaries</li>
+                <li><strong>Feature Engineering:</strong> Creating meaningful features, transformations</li>
+                <li><strong>Model Building:</strong> Algorithm selection, training, validation</li>
+                <li><strong>Model Evaluation:</strong> Metrics, cross-validation, testing</li>
+                <li><strong>Deployment:</strong> Production pipelines, monitoring, updates</li>
+            </ul>
+            
+            <h4>Machine Learning Algorithms:</h4>
+            <ul>
+                <li><strong>Linear Models:</strong> Linear Regression, Logistic Regression, Ridge, Lasso</li>
+                <li><strong>Tree-Based:</strong> Decision Trees, Random Forest, XGBoost, LightGBM</li>
+                <li><strong>Neural Networks:</strong> MLPs, CNNs, RNNs, Transformers, GANs</li>
+                <li><strong>Clustering:</strong> K-Means, DBSCAN, Hierarchical Clustering</li>
+                <li><strong>Dimensionality Reduction:</strong> PCA, t-SNE, UMAP</li>
+            </ul>
+            
+            <h4>Data Science Tools:</h4>
+            <ul>
+                <li><strong>Python:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</li>
+                <li><strong>R:</strong> dplyr, ggplot2, caret, shiny</li>
+                <li><strong>SQL:</strong> Data querying and manipulation</li>
+                <li><strong>Jupyter Notebooks:</strong> Interactive development environment</li>
+                <li><strong>Big Data:</strong> Spark, Hadoop, Dask</li>
+            </ul>
+        `
+    },
+    blockchain: {
+        title: 'Blockchain Development',
+        video: {
+            title: 'Blockchain Development Full Course',
+            duration: '10:30:00',
+            description: 'Complete blockchain and smart contract development tutorial',
+            embedId: 'M576WGiDBdQ'
+        },
+        notes: `
+            <h4>Complete Blockchain Development Guide</h4>
+            <p>Blockchain is a distributed ledger technology that enables secure, transparent, and immutable record-keeping. Blockchain development involves creating decentralized applications (dApps), smart contracts, and cryptocurrency solutions that operate without central authority.</p>
+            
+            <h4>Blockchain Fundamentals:</h4>
+            <ul>
+                <li><strong>Core Concepts:</strong> Blocks, hashes, consensus mechanisms, cryptography</li>
+                <li><strong>Blockchain Types:</strong> Public, private, consortium, hybrid</li>
+                <li><strong>Consensus Algorithms:</strong> Proof of Work (PoW), Proof of Stake (PoS), DPoS, PBFT</li>
+                <li><strong>Cryptography:</strong> Hash functions, digital signatures, public/private keys</li>
+            </ul>
+            
+            <h4>Smart Contract Development:</h4>
+            <ul>
+                <li><strong>Solidity:</strong> Ethereum's programming language</li>
+                <li><strong>Smart Contract Patterns:</strong> Factory, Proxy, Upgradeable contracts</li>
+                <li><strong>Testing:</strong> Truffle, Hardhat, testing frameworks</li>
+                <li><strong>Security:</strong> Common vulnerabilities, audits, best practices</li>
+            </ul>
+            
+            <h4>Blockchain Platforms:</h4>
+            <ul>
+                <li><strong>Ethereum:</strong> Most popular smart contract platform</li>
+                <li><strong>Binance Smart Chain:</strong> High-performance blockchain</li>
+                <li><strong>Polygon:</strong> Layer 2 scaling solution</li>
+                <li><strong>Solana:</strong> High-throughput blockchain</li>
+                <li><strong>Hyperledger:</strong> Enterprise blockchain framework</li>
+            </ul>
+        `
+    },
+    'ui-ux': {
+        title: 'UI/UX Design',
+        video: {
+            title: 'UI/UX Design Full Course',
+            duration: '8:30:00',
+            description: 'Complete user interface and user experience design tutorial',
+            embedId: 'c9VeoSwmv-s'
+        },
+        notes: `
+            <h4>Complete UI/UX Design Guide</h4>
+            <p>UI/UX Design focuses on creating intuitive, beautiful, and user-friendly interfaces. UI (User Interface) deals with the visual design, while UX (User Experience) focuses on the overall user journey and interaction flow.</p>
+            
+            <h4>UX Design Process:</h4>
+            <ul>
+                <li><strong>Research:</strong> User interviews, surveys, personas, user journeys</li>
+                <li><strong>Wireframing:</strong> Low-fidelity layouts, information architecture</li>
+                <li><strong>Prototyping:</strong> Interactive prototypes, user testing</li>
+                <li><strong>Usability Testing:</strong> A/B testing, heuristic evaluation</li>
+            </ul>
+            
+            <h4>UI Design Principles:</h4>
+            <ul>
+                <li><strong>Visual Hierarchy:</strong> Typography, spacing, color contrast</li>
+                <li><strong>Design Systems:</strong> Component libraries, style guides</li>
+                <li><strong>Responsive Design:</strong> Mobile-first, breakpoints, flexible layouts</li>
+                <li><strong>Accessibility:</strong> WCAG guidelines, color contrast, keyboard navigation</li>
+            </ul>
+            
+            <h4>Design Tools:</h4>
+            <ul>
+                <li><strong>Figma:</strong> Collaborative design tool</li>
+                <li><strong>Adobe XD:</strong> UI/UX design and prototyping</li>
+                <li><strong>Sketch:</strong> Vector-based design tool</li>
+                <li><strong>InVision:</strong> Prototyping and collaboration</li>
+            </ul>
+        `
+    },
+    'testing-qa': {
+        title: 'Software Testing & QA',
+        video: {
+            title: 'Software Testing & QA Full Course',
+            duration: '9:00:00',
+            description: 'Complete software testing and quality assurance tutorial',
+            embedId: 'uXl0ouSMfGI'
+        },
+        notes: `
+            <h4>Complete Software Testing & QA Guide</h4>
+            <p>Software Testing ensures that applications meet requirements, function correctly, and provide a quality user experience. Quality Assurance (QA) encompasses the entire process of preventing defects and ensuring software quality throughout the development lifecycle.</p>
+            
+            <h4>Testing Types:</h4>
+            <ul>
+                <li><strong>Unit Testing:</strong> Testing individual components in isolation</li>
+                <li><strong>Integration Testing:</strong> Testing component interactions</li>
+                <li><strong>System Testing:</strong> Testing complete system functionality</li>
+                <li><strong>Acceptance Testing:</strong> User acceptance, alpha/beta testing</li>
+                <li><strong>Performance Testing:</strong> Load, stress, scalability testing</li>
+                <li><strong>Security Testing:</strong> Vulnerability scanning, penetration testing</li>
+            </ul>
+            
+            <h4>Testing Methodologies:</h4>
+            <ul>
+                <li><strong>Manual Testing:</strong> Human testers execute test cases</li>
+                <li><strong>Automated Testing:</strong> Scripts and tools for automated execution</li>
+                <li><strong>Test-Driven Development (TDD):</strong> Write tests before code</li>
+                <li><strong>Behavior-Driven Development (BDD):</strong> Tests written in natural language</li>
+            </ul>
+            
+            <h4>Testing Tools:</h4>
+            <ul>
+                <li><strong>Unit Testing:</strong> Jest, JUnit, pytest, Mocha</li>
+                <li><strong>E2E Testing:</strong> Selenium, Cypress, Playwright, Puppeteer</li>
+                <li><strong>API Testing:</strong> Postman, REST Assured, SoapUI</li>
+                <li><strong>Performance:</strong> JMeter, LoadRunner, Gatling</li>
+            </ul>
+        `
     }
 };
 
@@ -1334,7 +1554,12 @@ function getServiceLink(title) {
         'Security Services': 'security.html',
         'Analytics & Data': 'analytics.html',
         'API Development': 'api.html',
-        'DevOps & Automation': 'devops.html'
+        'DevOps & Automation': 'devops.html',
+        'AI Engineering': 'ai-engineering.html',
+        'Machine Learning & Data Science': 'ml-data-science.html',
+        'Blockchain Development': 'blockchain.html',
+        'UI/UX Design': 'ui-ux.html',
+        'Software Testing & QA': 'testing-qa.html'
     };
     return serviceMap[title] || 'index.html';
 }
@@ -1384,6 +1609,126 @@ function shareCourse(title, url) {
         navigator.clipboard.writeText(shareText).then(() => {
             alert('Link copied to clipboard!');
         });
+    }
+}
+
+// Download Notes as PDF
+function downloadNotes(courseTitle) {
+    const notesContent = document.getElementById('notesContent');
+    if (!notesContent) {
+        alert('Notes content not found!');
+        return;
+    }
+    
+    // Create a new window with the notes content
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>${courseTitle} - Notes</title>
+            <style>
+                body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+                h4 { color: #333; margin-top: 20px; }
+                ul { margin: 10px 0; }
+                li { margin: 5px 0; }
+                @media print { body { padding: 0; } }
+            </style>
+        </head>
+        <body>
+            <h1>${courseTitle} - Learning Notes</h1>
+            <p><strong>Joe's Learning Platform</strong></p>
+            <hr>
+            ${notesContent.innerHTML}
+            <hr>
+            <p style="margin-top: 30px; color: #666; font-size: 12px;">
+                Generated from Joe's Learning Platform - ${new Date().toLocaleDateString()}
+            </p>
+        </body>
+        </html>
+    `);
+    printWindow.document.close();
+    
+    // Wait for content to load, then print
+    setTimeout(() => {
+        printWindow.print();
+    }, 250);
+}
+
+// Video Playback Speed Control
+function initVideoSpeedControl() {
+    const videoContainers = document.querySelectorAll('.service-video-container iframe');
+    videoContainers.forEach(iframe => {
+        const container = iframe.parentElement;
+        const speedControl = document.createElement('div');
+        speedControl.className = 'video-speed-control';
+        speedControl.innerHTML = `
+            <label for="playbackSpeed">Playback Speed: </label>
+            <select id="playbackSpeed" onchange="changePlaybackSpeed(this.value)">
+                <option value="0.5">0.5x</option>
+                <option value="0.75">0.75x</option>
+                <option value="1" selected>1x (Normal)</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.5">1.5x</option>
+                <option value="1.75">1.75x</option>
+                <option value="2">2x</option>
+            </select>
+        `;
+        container.appendChild(speedControl);
+    });
+}
+
+function changePlaybackSpeed(speed) {
+    const iframe = document.querySelector('.service-video-container iframe');
+    if (iframe && iframe.contentWindow) {
+        // Note: YouTube doesn't allow direct speed control via iframe API
+        // This would require YouTube IFrame API implementation
+        alert('For YouTube videos, use the speed control in the video player itself. For other video players, speed control will be implemented.');
+    }
+}
+
+// Related Courses Suggestions
+function showRelatedCourses(currentService) {
+    const relatedMap = {
+        'ai-engineering': ['ml-data-science', 'cloud', 'api'],
+        'ml-data-science': ['ai-engineering', 'analytics', 'database'],
+        'blockchain': ['security', 'api', 'web'],
+        'ui-ux': ['web', 'mobile', 'api'],
+        'testing-qa': ['devops', 'web', 'mobile'],
+        'cloud': ['devops', 'security', 'api'],
+        'mobile': ['web', 'api', 'ui-ux'],
+        'web': ['api', 'database', 'ui-ux'],
+        'database': ['api', 'analytics', 'cloud'],
+        'security': ['cloud', 'api', 'devops'],
+        'analytics': ['database', 'ml-data-science', 'api'],
+        'api': ['web', 'mobile', 'cloud'],
+        'devops': ['cloud', 'security', 'api']
+    };
+    
+    const related = relatedMap[currentService] || [];
+    if (related.length === 0) return;
+    
+    const relatedSection = document.createElement('div');
+    relatedSection.className = 'related-courses';
+    relatedSection.innerHTML = `
+        <h3><i class="fas fa-link"></i> Related Courses</h3>
+        <div class="related-courses-grid">
+            ${related.map(service => {
+                const serviceData = serviceDetails[service];
+                if (!serviceData) return '';
+                return `
+                    <a href="${getServiceLink(serviceData.title)}" class="related-course-card">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>${serviceData.title}</span>
+                    </a>
+                `;
+            }).join('')}
+        </div>
+    `;
+    
+    const notesSection = document.querySelector('.service-notes-section');
+    if (notesSection) {
+        notesSection.insertAdjacentElement('afterend', relatedSection);
     }
 }
 

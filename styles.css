@@ -415,6 +415,77 @@ body.light-theme .navbar {
     border-bottom: 1px solid var(--glass-border);
 }
 
+/* Related Courses */
+.related-courses {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+}
+
+.related-courses h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-neon);
+}
+
+.related-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.related-course-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.related-course-card:hover {
+    background: var(--card-bg);
+    border-color: var(--primary-neon);
+    transform: translateX(10px);
+    box-shadow: var(--shadow-neon);
+}
+
+/* Video Speed Control */
+.video-speed-control {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.video-speed-control label {
+    color: var(--text-secondary);
+}
+
+.video-speed-control select {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.video-speed-control select:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+}
+
 .search-icon {
     position: absolute;
     right: 1.25rem;
