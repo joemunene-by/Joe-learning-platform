@@ -62,7 +62,7 @@ const serviceDetails = {
             title: 'AWS Cloud Full Course - Complete Tutorial',
             duration: '11:30:00',
             description: 'Complete AWS cloud infrastructure tutorial covering all major services',
-            embedId: 'ulprqHHWlng'
+            embedId: '3hHmUe1cBaM'
         },
         notes: `
             <h4>Complete Cloud Infrastructure Guide</h4>
@@ -1100,9 +1100,89 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
+// Search Functionality
+const searchInput = document.getElementById('searchInput');
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        if (searchTerm.length > 0) {
+            filterServices(searchTerm);
+        } else {
+            showAllServices();
+        }
+    });
+}
+
+function filterServices(searchTerm) {
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('p').textContent.toLowerCase();
+        
+        if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function showAllServices() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.style.display = 'block';
+    });
+}
+
+// Advanced Animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all animated elements
+document.querySelectorAll('.service-card, .learning-level, .resource-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
+    fadeInObserver.observe(el);
+});
+
+// Smooth scroll with offset for fixed navbar
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offset = 80;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Add any initialization code here
     console.log("Joe's Learning Platform loaded");
+    
+    // Add loading animation
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    }, 100);
 });
 

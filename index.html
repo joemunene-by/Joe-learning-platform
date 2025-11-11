@@ -21,6 +21,10 @@
                 <li><a href="#nexus-ai" class="nav-link">Nexus AI</a></li>
                 <li><a href="#resources" class="nav-link">Resources</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search courses..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -60,7 +64,7 @@
                     </div>
                     <h3>Cloud Infrastructure</h3>
                     <p>Learn to build and deploy scalable cloud solutions</p>
-                    <button class="service-btn" onclick="openService('cloud')">Learn More</button>
+                    <a href="cloud.html" class="service-btn">Learn More</a>
                 </div>
 
                 <!-- Service Card 2 -->
@@ -70,7 +74,7 @@
                     </div>
                     <h3>Mobile Development</h3>
                     <p>Master iOS and Android app development</p>
-                    <button class="service-btn" onclick="openService('mobile')">Learn More</button>
+                    <a href="mobile.html" class="service-btn">Learn More</a>
                 </div>
 
                 <!-- Service Card 3 -->
@@ -80,7 +84,7 @@
                     </div>
                     <h3>Web Development</h3>
                     <p>Build modern, responsive web applications</p>
-                    <button class="service-btn" onclick="openService('web')">Learn More</button>
+                    <a href="web.html" class="service-btn">Learn More</a>
                 </div>
 
                 <!-- Service Card 4 -->
@@ -90,7 +94,7 @@
                     </div>
                     <h3>Database Solutions</h3>
                     <p>Design and optimize database architectures</p>
-                    <button class="service-btn" onclick="openService('database')">Learn More</button>
+                    <a href="database.html" class="service-btn">Learn More</a>
                 </div>
 
                 <!-- Service Card 5 -->
@@ -100,7 +104,7 @@
                     </div>
                     <h3>Security Services</h3>
                     <p>Implement robust security measures</p>
-                    <button class="service-btn" onclick="openService('security')">Learn More</button>
+                    <a href="security.html" class="service-btn">Learn More</a>
                 </div>
 
                 <!-- Service Card 6 -->
@@ -110,7 +114,7 @@
                     </div>
                     <h3>Analytics & Data</h3>
                     <p>Harness the power of data analytics</p>
-                    <button class="service-btn" onclick="openService('analytics')">Learn More</button>
+                    <a href="analytics.html" class="service-btn">Learn More</a>
                 </div>
 
                 <!-- Service Card 7 -->
@@ -120,7 +124,7 @@
                     </div>
                     <h3>API Development</h3>
                     <p>Create powerful REST and GraphQL APIs</p>
-                    <button class="service-btn" onclick="openService('api')">Learn More</button>
+                    <a href="api.html" class="service-btn">Learn More</a>
                 </div>
 
                 <!-- Service Card 8 -->
@@ -130,7 +134,7 @@
                     </div>
                     <h3>DevOps & Automation</h3>
                     <p>Streamline development and deployment</p>
-                    <button class="service-btn" onclick="openService('devops')">Learn More</button>
+                    <a href="devops.html" class="service-btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -543,7 +547,28 @@ async def chat_stream(request: ChatRequest):
         </div>
     </footer>
 
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
     <script src="script.js"></script>
+    <script>
+        // Create particle effect
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        createParticles();
+    </script>
 </body>
 </html>
 
