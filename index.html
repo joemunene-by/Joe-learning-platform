@@ -155,36 +155,93 @@
                         <div class="video-section">
                             <h3><i class="fas fa-video"></i> Introduction Video</h3>
                             <div class="video-container">
-                                <div class="video-placeholder">
-                                    <i class="fas fa-play-circle"></i>
-                                    <p>Video: Introduction to Nexus AI Architecture</p>
-                                    <span>Duration: 15:30</span>
-                                </div>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jGwO_UgTS7I" title="Build a ChatGPT Clone with React & OpenAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="notes-section">
-                            <h3><i class="fas fa-book"></i> Detailed Notes</h3>
+                            <h3><i class="fas fa-book"></i> Comprehensive Notes</h3>
                             <div class="notes-content">
-                                <h4>What is Nexus AI?</h4>
-                                <p>Nexus AI is an advanced artificial intelligence assistant designed to understand context, provide intelligent responses, and assist with complex tasks. It combines natural language processing, machine learning, and advanced reasoning capabilities.</p>
+                                <h4>What is Nexus AI? - Complete Overview</h4>
+                                <p>Nexus AI represents the next generation of artificial intelligence assistants, combining cutting-edge natural language processing, machine learning algorithms, and advanced reasoning capabilities to create an intelligent system that can understand context, maintain conversations, and assist with complex multi-step tasks. Unlike traditional chatbots, Nexus AI employs sophisticated architectures that enable it to process information, learn from interactions, and provide contextually relevant responses.</p>
                                 
-                                <h4>Key Features:</h4>
+                                <p>The system is built on the foundation of Large Language Models (LLMs), which are neural networks trained on vast amounts of text data. These models understand patterns in human language, allowing them to generate coherent, contextually appropriate responses. Nexus AI goes beyond simple pattern matching by implementing advanced techniques like attention mechanisms, transformer architectures, and fine-tuning processes that enable it to excel in specific domains.</p>
+
+                                <h4>Core Architecture Components:</h4>
                                 <ul>
-                                    <li><strong>Natural Language Understanding:</strong> Processes and understands human language in context</li>
-                                    <li><strong>Contextual Memory:</strong> Maintains conversation context across interactions</li>
-                                    <li><strong>Multi-modal Capabilities:</strong> Handles text, code, and structured data</li>
-                                    <li><strong>Adaptive Learning:</strong> Improves responses based on user interactions</li>
-                                    <li><strong>Tool Integration:</strong> Can execute code, search, and interact with external systems</li>
+                                    <li><strong>Natural Language Understanding (NLU):</strong> The system processes and understands human language in context using advanced NLP techniques. This includes tokenization, part-of-speech tagging, named entity recognition, sentiment analysis, and intent classification. The NLU component breaks down user inputs into structured representations that the AI can process.</li>
+                                    
+                                    <li><strong>Contextual Memory System:</strong> Maintains conversation context across multiple interactions using both short-term and long-term memory mechanisms. Short-term memory stores the immediate conversation history, while long-term memory uses vector databases to store and retrieve relevant past interactions. This dual-memory system allows the AI to reference previous conversations and maintain continuity.</li>
+                                    
+                                    <li><strong>Multi-modal Processing:</strong> Handles various data types including text, code, structured data (JSON, XML), images, and potentially audio. The system can process code snippets, understand programming languages, analyze data structures, and even interpret visual content when integrated with vision models.</li>
+                                    
+                                    <li><strong>Adaptive Learning Mechanisms:</strong> The system improves its responses based on user interactions through reinforcement learning from human feedback (RLHF), fine-tuning on user-specific data, and continuous model updates. This allows the AI to adapt to individual user preferences and improve over time.</li>
+                                    
+                                    <li><strong>Tool Integration Framework:</strong> Can execute code in sandboxed environments, perform web searches, interact with external APIs, manipulate files, and integrate with various third-party services. This tool-use capability transforms the AI from a simple conversational agent into a powerful assistant that can perform actions.</li>
+                                    
+                                    <li><strong>Response Generation Engine:</strong> Uses advanced language models to generate coherent, contextually appropriate responses. This includes techniques like beam search, nucleus sampling, and temperature control to balance creativity and accuracy.</li>
                                 </ul>
 
-                                <h4>Technology Stack:</h4>
+                                <h4>Complete Technology Stack:</h4>
                                 <ul>
-                                    <li>Large Language Models (LLMs) - GPT-4, Claude, or open-source alternatives</li>
-                                    <li>Vector Databases - For semantic search and memory</li>
-                                    <li>API Framework - FastAPI or Flask for backend</li>
-                                    <li>Frontend - React or Vue.js for user interface</li>
-                                    <li>Deployment - Docker, Kubernetes, or cloud platforms</li>
+                                    <li><strong>Large Language Models (LLMs):</strong> 
+                                        <ul>
+                                            <li>OpenAI GPT-4, GPT-3.5-turbo - Commercial APIs with excellent performance</li>
+                                            <li>Anthropic Claude - Advanced reasoning capabilities</li>
+                                            <li>Open-source alternatives: Llama 2/3, Mistral, Falcon, CodeLlama</li>
+                                            <li>Local models: Ollama, LM Studio for privacy-focused deployments</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Vector Databases & Embeddings:</strong> 
+                                        <ul>
+                                            <li>Pinecone - Managed vector database service</li>
+                                            <li>ChromaDB - Open-source embedding database</li>
+                                            <li>Weaviate - Vector search engine with GraphQL</li>
+                                            <li>Qdrant - High-performance vector database</li>
+                                            <li>Embedding models: OpenAI text-embedding-ada-002, sentence-transformers</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Backend API Framework:</strong> 
+                                        <ul>
+                                            <li>FastAPI - Modern, fast Python web framework with async support</li>
+                                            <li>Flask - Lightweight, flexible Python framework</li>
+                                            <li>Express.js - Node.js framework for JavaScript/TypeScript</li>
+                                            <li>Django - Full-featured Python framework</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Frontend Technologies:</strong> 
+                                        <ul>
+                                            <li>React - Component-based UI library with hooks</li>
+                                            <li>Vue.js - Progressive JavaScript framework</li>
+                                            <li>Next.js - React framework with SSR capabilities</li>
+                                            <li>TypeScript - Typed JavaScript for better development experience</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Deployment & Infrastructure:</strong> 
+                                        <ul>
+                                            <li>Docker - Containerization for consistent deployments</li>
+                                            <li>Kubernetes - Container orchestration for scaling</li>
+                                            <li>AWS, Azure, GCP - Cloud platforms for hosting</li>
+                                            <li>Vercel, Netlify - Serverless deployment platforms</li>
+                                        </ul>
+                                    </li>
                                 </ul>
+
+                                <h4>Key Capabilities & Use Cases:</h4>
+                                <ul>
+                                    <li><strong>Code Generation & Assistance:</strong> Write, debug, and explain code in multiple programming languages</li>
+                                    <li><strong>Data Analysis:</strong> Process and analyze datasets, generate insights, create visualizations</li>
+                                    <li><strong>Content Creation:</strong> Generate articles, summaries, translations, and creative content</li>
+                                    <li><strong>Problem Solving:</strong> Break down complex problems, provide step-by-step solutions</li>
+                                    <li><strong>Learning & Education:</strong> Explain concepts, create tutorials, answer questions</li>
+                                    <li><strong>Automation:</strong> Integrate with APIs, automate workflows, perform repetitive tasks</li>
+                                </ul>
+
+                                <h4>Performance Considerations:</h4>
+                                <p>Building a production-ready AI assistant requires careful consideration of latency, cost, and scalability. Response times should be optimized through caching, streaming responses, and efficient model selection. Cost management involves choosing the right model for each task, implementing rate limiting, and using caching strategies. Scalability requires proper architecture design, load balancing, and horizontal scaling capabilities.</p>
                             </div>
                         </div>
                     </div>
@@ -195,11 +252,7 @@
                         <div class="video-section">
                             <h3><i class="fas fa-video"></i> Architecture Deep Dive</h3>
                             <div class="video-container">
-                                <div class="video-placeholder">
-                                    <i class="fas fa-play-circle"></i>
-                                    <p>Video: System Architecture and Design Patterns</p>
-                                    <span>Duration: 22:45</span>
-                                </div>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bZQun8Y4L2A" title="LangChain Crash Course - Build Apps with LLMs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="notes-section">
@@ -261,11 +314,7 @@ Response Generation → User Output</code></pre>
                         <div class="video-section">
                             <h3><i class="fas fa-video"></i> Step-by-Step Implementation</h3>
                             <div class="video-container">
-                                <div class="video-placeholder">
-                                    <i class="fas fa-play-circle"></i>
-                                    <p>Video: Building Nexus AI from Scratch</p>
-                                    <span>Duration: 45:20</span>
-                                </div>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3yPBVii7Ct0" title="Build an AI Chatbot in 15 Minutes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="notes-section">
@@ -356,11 +405,7 @@ async def root():
                         <div class="video-section">
                             <h3><i class="fas fa-video"></i> Advanced Features</h3>
                             <div class="video-container">
-                                <div class="video-placeholder">
-                                    <i class="fas fa-play-circle"></i>
-                                    <p>Video: Advanced Features and Optimizations</p>
-                                    <span>Duration: 30:15</span>
-                                </div>
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dXxQ0LR-3Hg" title="Build a RAG System with Vector Database" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                         <div class="notes-section">
