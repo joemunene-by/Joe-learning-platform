@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Learning Platform - Complete Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Joe's Learning Platform</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#nexus-ai" class="nav-link">Nexus AI</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Master Development Services</h1>
+            <p class="hero-subtitle">Complete learning platform with detailed videos, comprehensive notes, and hands-on tutorials</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">Explore Services</a>
+                <a href="#nexus-ai" class="btn btn-secondary">Build Nexus AI</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card">
+                <i class="fas fa-robot"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">All Development Services</h2>
+            <p class="section-subtitle">Comprehensive guides for every service we offer</p>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Learn to build and deploy scalable cloud solutions</p>
+                    <button class="service-btn" onclick="openService('cloud')">Learn More</button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Master iOS and Android app development</p>
+                    <button class="service-btn" onclick="openService('mobile')">Learn More</button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Build modern, responsive web applications</p>
+                    <button class="service-btn" onclick="openService('web')">Learn More</button>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Solutions</h3>
+                    <p>Design and optimize database architectures</p>
+                    <button class="service-btn" onclick="openService('database')">Learn More</button>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security Services</h3>
+                    <p>Implement robust security measures</p>
+                    <button class="service-btn" onclick="openService('security')">Learn More</button>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Data</h3>
+                    <p>Harness the power of data analytics</p>
+                    <button class="service-btn" onclick="openService('analytics')">Learn More</button>
+                </div>
+
+                <!-- Service Card 7 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>API Development</h3>
+                    <p>Create powerful REST and GraphQL APIs</p>
+                    <button class="service-btn" onclick="openService('api')">Learn More</button>
+                </div>
+
+                <!-- Service Card 8 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>DevOps & Automation</h3>
+                    <p>Streamline development and deployment</p>
+                    <button class="service-btn" onclick="openService('devops')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nexus AI Section -->
+    <section id="nexus-ai" class="nexus-section">
+        <div class="container">
+            <h2 class="section-title">Build Your Own Nexus AI</h2>
+            <p class="section-subtitle">Complete step-by-step guide to building an AI assistant like Nexus</p>
+
+            <div class="nexus-content">
+                <div class="nexus-tabs">
+                    <button class="tab-btn active" onclick="switchTab('overview')">Overview</button>
+                    <button class="tab-btn" onclick="switchTab('architecture')">Architecture</button>
+                    <button class="tab-btn" onclick="switchTab('implementation')">Implementation</button>
+                    <button class="tab-btn" onclick="switchTab('advanced')">Advanced Features</button>
+                </div>
+
+                <div class="tab-content active" id="overview-tab">
+                    <div class="content-wrapper">
+                        <div class="video-section">
+                            <h3><i class="fas fa-video"></i> Introduction Video</h3>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-play-circle"></i>
+                                    <p>Video: Introduction to Nexus AI Architecture</p>
+                                    <span>Duration: 15:30</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notes-section">
+                            <h3><i class="fas fa-book"></i> Detailed Notes</h3>
+                            <div class="notes-content">
+                                <h4>What is Nexus AI?</h4>
+                                <p>Nexus AI is an advanced artificial intelligence assistant designed to understand context, provide intelligent responses, and assist with complex tasks. It combines natural language processing, machine learning, and advanced reasoning capabilities.</p>
+                                
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li><strong>Natural Language Understanding:</strong> Processes and understands human language in context</li>
+                                    <li><strong>Contextual Memory:</strong> Maintains conversation context across interactions</li>
+                                    <li><strong>Multi-modal Capabilities:</strong> Handles text, code, and structured data</li>
+                                    <li><strong>Adaptive Learning:</strong> Improves responses based on user interactions</li>
+                                    <li><strong>Tool Integration:</strong> Can execute code, search, and interact with external systems</li>
+                                </ul>
+
+                                <h4>Technology Stack:</h4>
+                                <ul>
+                                    <li>Large Language Models (LLMs) - GPT-4, Claude, or open-source alternatives</li>
+                                    <li>Vector Databases - For semantic search and memory</li>
+                                    <li>API Framework - FastAPI or Flask for backend</li>
+                                    <li>Frontend - React or Vue.js for user interface</li>
+                                    <li>Deployment - Docker, Kubernetes, or cloud platforms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="architecture-tab">
+                    <div class="content-wrapper">
+                        <div class="video-section">
+                            <h3><i class="fas fa-video"></i> Architecture Deep Dive</h3>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-play-circle"></i>
+                                    <p>Video: System Architecture and Design Patterns</p>
+                                    <span>Duration: 22:45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notes-section">
+                            <h3><i class="fas fa-book"></i> Architecture Notes</h3>
+                            <div class="notes-content">
+                                <h4>System Architecture Overview</h4>
+                                <p>The Nexus AI architecture follows a modular, scalable design pattern that separates concerns and allows for easy expansion.</p>
+                                
+                                <h4>Core Components:</h4>
+                                <ol>
+                                    <li><strong>Input Processing Layer:</strong>
+                                        <ul>
+                                            <li>Text normalization and preprocessing</li>
+                                            <li>Intent classification</li>
+                                            <li>Context extraction</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>LLM Integration Layer:</strong>
+                                        <ul>
+                                            <li>API communication with language models</li>
+                                            <li>Prompt engineering and optimization</li>
+                                            <li>Response generation and validation</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Memory Management:</strong>
+                                        <ul>
+                                            <li>Short-term memory (conversation context)</li>
+                                            <li>Long-term memory (vector database)</li>
+                                            <li>Semantic search and retrieval</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Tool Execution Layer:</strong>
+                                        <ul>
+                                            <li>Code execution sandbox</li>
+                                            <li>External API integrations</li>
+                                            <li>File system operations</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Response Generation:</strong>
+                                        <ul>
+                                            <li>Response formatting</li>
+                                            <li>Streaming support</li>
+                                            <li>Error handling</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+
+                                <h4>Data Flow:</h4>
+                                <pre><code>User Input → Preprocessing → LLM API → 
+Memory Retrieval → Tool Execution → 
+Response Generation → User Output</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="implementation-tab">
+                    <div class="content-wrapper">
+                        <div class="video-section">
+                            <h3><i class="fas fa-video"></i> Step-by-Step Implementation</h3>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-play-circle"></i>
+                                    <p>Video: Building Nexus AI from Scratch</p>
+                                    <span>Duration: 45:20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notes-section">
+                            <h3><i class="fas fa-book"></i> Implementation Guide</h3>
+                            <div class="notes-content">
+                                <h4>Step 1: Project Setup</h4>
+                                <pre><code># Create project structure
+mkdir nexus-ai
+cd nexus-ai
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install openai fastapi uvicorn python-dotenv</code></pre>
+
+                                <h4>Step 2: Environment Configuration</h4>
+                                <pre><code># .env file
+OPENAI_API_KEY=your_api_key_here
+MODEL_NAME=gpt-4
+MAX_TOKENS=2000
+TEMPERATURE=0.7</code></pre>
+
+                                <h4>Step 3: Core AI Class</h4>
+                                <pre><code># ai_core.py
+import openai
+from typing import List, Dict
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class NexusAI:
+    def __init__(self):
+        self.api_key = os.getenv("OPENAI_API_KEY")
+        openai.api_key = self.api_key
+        self.conversation_history = []
+    
+    def process_input(self, user_input: str) -> str:
+        """Process user input and generate response"""
+        self.conversation_history.append({
+            "role": "user",
+            "content": user_input
+        })
+        
+        response = openai.ChatCompletion.create(
+            model=os.getenv("MODEL_NAME", "gpt-4"),
+            messages=self.conversation_history,
+            max_tokens=int(os.getenv("MAX_TOKENS", 2000)),
+            temperature=float(os.getenv("TEMPERATURE", 0.7))
+        )
+        
+        ai_response = response.choices[0].message.content
+        self.conversation_history.append({
+            "role": "assistant",
+            "content": ai_response
+        })
+        
+        return ai_response</code></pre>
+
+                                <h4>Step 4: API Endpoint</h4>
+                                <pre><code># main.py
+from fastapi import FastAPI
+from pydantic import BaseModel
+from ai_core import NexusAI
+
+app = FastAPI()
+nexus = NexusAI()
+
+class ChatRequest(BaseModel):
+    message: str
+
+@app.post("/chat")
+async def chat(request: ChatRequest):
+    response = nexus.process_input(request.message)
+    return {"response": response}
+
+@app.get("/")
+async def root():
+    return {"message": "Nexus AI API is running"}</code></pre>
+
+                                <h4>Step 5: Run the Server</h4>
+                                <pre><code>uvicorn main:app --reload --port 8000</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="advanced-tab">
+                    <div class="content-wrapper">
+                        <div class="video-section">
+                            <h3><i class="fas fa-video"></i> Advanced Features</h3>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <i class="fas fa-play-circle"></i>
+                                    <p>Video: Advanced Features and Optimizations</p>
+                                    <span>Duration: 30:15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notes-section">
+                            <h3><i class="fas fa-book"></i> Advanced Features Guide</h3>
+                            <div class="notes-content">
+                                <h4>1. Vector Database Integration</h4>
+                                <p>Implement semantic search using vector databases like Pinecone or ChromaDB:</p>
+                                <pre><code># Install: pip install chromadb
+import chromadb
+from sentence_transformers import SentenceTransformer
+
+class MemorySystem:
+    def __init__(self):
+        self.client = chromadb.Client()
+        self.collection = self.client.create_collection("conversations")
+        self.encoder = SentenceTransformer('all-MiniLM-L6-v2')
+    
+    def store_memory(self, text: str, metadata: dict):
+        embedding = self.encoder.encode(text).tolist()
+        self.collection.add(
+            embeddings=[embedding],
+            documents=[text],
+            metadatas=[metadata],
+            ids=[f"id_{len(self.collection.get()['ids'])}"]
+        )
+    
+    def retrieve_similar(self, query: str, n_results: int = 5):
+        query_embedding = self.encoder.encode(query).tolist()
+        results = self.collection.query(
+            query_embeddings=[query_embedding],
+            n_results=n_results
+        )
+        return results</code></pre>
+
+                                <h4>2. Tool System</h4>
+                                <p>Add tool execution capabilities:</p>
+                                <pre><code>class ToolSystem:
+    def __init__(self):
+        self.tools = {
+            "calculator": self.calculate,
+            "web_search": self.search_web,
+            "code_executor": self.execute_code
+        }
+    
+    def calculate(self, expression: str) -> str:
+        try:
+            result = eval(expression)
+            return str(result)
+        except:
+            return "Invalid expression"
+    
+    def execute_code(self, code: str, language: str = "python") -> str:
+        # Implement safe code execution
+        # Use sandboxed environment
+        pass</code></pre>
+
+                                <h4>3. Streaming Responses</h4>
+                                <pre><code>from fastapi.responses import StreamingResponse
+import json
+
+@app.post("/chat/stream")
+async def chat_stream(request: ChatRequest):
+    async def generate():
+        stream = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=nexus.conversation_history,
+            stream=True
+        )
+        for chunk in stream:
+            if chunk.choices[0].delta.content:
+                yield f"data: {json.dumps({'content': chunk.choices[0].delta.content})}\n\n"
+    
+    return StreamingResponse(generate(), media_type="text/event-stream")</code></pre>
+
+                                <h4>4. Multi-modal Support</h4>
+                                <p>Add image and file processing capabilities using vision models.</p>
+
+                                <h4>5. Performance Optimization</h4>
+                                <ul>
+                                    <li>Implement response caching</li>
+                                    <li>Use async/await for concurrent requests</li>
+                                    <li>Add rate limiting</li>
+                                    <li>Implement connection pooling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Additional Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>PDF Documentation</h3>
+                    <p>Download comprehensive PDF guides</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Code Examples</h3>
+                    <p>Access complete code repositories</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>FAQ Section</h3>
+                    <p>Common questions and answers</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Forum</h3>
+                    <p>Connect with other learners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeService()">&times;</span>
+            <div id="serviceDetails"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Joe's Learning Platform. All rights reserved.</p>
+            <p>Educational platform for learning advanced development services</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
