@@ -108,7 +108,7 @@
 
                 <div class="service-notes-section">
                     <h2><i class="fas fa-book"></i> Comprehensive Learning Notes</h2>
-                    <div class="notes-content">
+                    <div class="notes-content" id="notesContent">
                         <h4>Complete Mobile Development Guide</h4>
                         <p>Mobile application development has evolved into a sophisticated discipline that requires understanding multiple platforms, programming languages, frameworks, and design principles. Modern mobile apps must deliver exceptional user experiences while handling complex business logic, real-time data synchronization, offline capabilities, and seamless integration with backend services.</p>
                         
@@ -161,6 +161,17 @@
                             <li>Follow accessibility guidelines (WCAG, platform-specific)</li>
                         </ul>
                     </div>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <button class="btn btn-secondary" onclick="downloadNotes('Mobile Development')">
+                            <i class="fas fa-download"></i> Download Notes as PDF
+                        </button>
+                        <button class="btn btn-primary" onclick="startQuiz('mobile')">
+                            <i class="fas fa-question-circle"></i> Take Quiz
+                        </button>
+                        <button class="btn btn-secondary" onclick="searchNotesInPage()">
+                            <i class="fas fa-search"></i> Search Notes
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,6 +193,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="advanced-features.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            showRelatedCourses('mobile');
+        });
+    </script>
 </body>
 </html>
 

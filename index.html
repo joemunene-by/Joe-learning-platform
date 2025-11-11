@@ -19,13 +19,21 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#nexus-ai" class="nav-link">Nexus AI</a></li>
+                <li><a href="#analytics" class="nav-link">Analytics</a></li>
                 <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#profile" class="nav-link">Profile</a></li>
             </ul>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search courses..." class="search-input">
                 <i class="fas fa-search search-icon"></i>
             </div>
             <div class="nav-actions">
+                <button class="nav-icon-btn" id="timerBtn" title="Study Timer">
+                    <i class="fas fa-clock"></i>
+                </button>
+                <button class="nav-icon-btn" id="playgroundBtn" title="Code Playground">
+                    <i class="fas fa-code"></i>
+                </button>
                 <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -561,30 +569,124 @@ async def chat_stream(request: ChatRequest):
         </div>
     </section>
 
+    <!-- Analytics Dashboard Section -->
+    <section id="analytics" class="analytics-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> Learning Analytics</h2>
+            <p class="section-subtitle">Track your progress and achievements</p>
+            
+            <div class="analytics-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stat-info">
+                        <h3 id="coursesCompleted">0</h3>
+                        <p>Courses Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-info">
+                        <h3 id="totalStudyTime">0h</h3>
+                        <p>Total Study Time</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="stat-info">
+                        <h3 id="achievementsCount">0</h3>
+                        <p>Achievements Unlocked</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                    <div class="stat-info">
+                        <h3 id="certificatesCount">0</h3>
+                        <p>Certificates Earned</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-section">
+                <h3><i class="fas fa-medal"></i> Your Achievements</h3>
+                <div class="achievements-grid" id="achievementsGrid">
+                    <!-- Achievements will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="progress-chart">
+                <h3><i class="fas fa-chart-pie"></i> Course Progress</h3>
+                <div class="progress-bars-container" id="progressBarsContainer">
+                    <!-- Progress bars will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Profile Section -->
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user"></i> Your Profile</h2>
+            <div class="profile-container">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-image-container">
+                            <!-- TODO: Replace with your actual image URL. Upload your image to imgur.com or another image hosting service and update the src below -->
+                            <img src="https://i.imgur.com/YOUR_IMAGE_ID.jpg" alt="Joe Munene" class="profile-image" id="profileImage" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27400%27%3E%3Crect fill=%27%2300f3ff%27 width=%27400%27 height=%27400%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2720%27 fill=%27white%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EJoe Munene%3C/text%3E%3C/svg%3E'">
+                            <div class="profile-badge">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Joe Munene</h2>
+                            <p class="profile-title">Full Stack Developer & AI Engineer</p>
+                            <div class="profile-stats">
+                                <span><i class="fas fa-book"></i> 13 Courses</span>
+                                <span><i class="fas fa-clock"></i> <span id="profileStudyTime">0h</span> Studied</span>
+                                <span><i class="fas fa-trophy"></i> <span id="profileAchievements">0</span> Achievements</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary" onclick="generateCertificate('All Courses')">
+                            <i class="fas fa-certificate"></i> View Certificates
+                        </button>
+                        <button class="btn btn-secondary" onclick="shareProfile()">
+                            <i class="fas fa-share"></i> Share Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Resources Section -->
     <section id="resources" class="resources-section">
         <div class="container">
             <h2 class="section-title">Additional Resources</h2>
             <div class="resources-grid">
-                <div class="resource-card">
-                    <i class="fas fa-file-pdf"></i>
-                    <h3>PDF Documentation</h3>
-                    <p>Download comprehensive PDF guides</p>
-                </div>
-                <div class="resource-card">
+                <div class="resource-card" onclick="openResource('code-samples')">
                     <i class="fas fa-code"></i>
-                    <h3>Code Examples</h3>
-                    <p>Access complete code repositories</p>
+                    <h3>Code Samples</h3>
+                    <p>Download complete code examples and templates</p>
+                    <button class="resource-btn"><i class="fas fa-download"></i> Download</button>
                 </div>
-                <div class="resource-card">
-                    <i class="fas fa-question-circle"></i>
-                    <h3>FAQ Section</h3>
-                    <p>Common questions and answers</p>
+                <div class="resource-card" onclick="openResource('cheat-sheets')">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Cheat Sheets</h3>
+                    <p>Quick reference guides for all technologies</p>
+                    <button class="resource-btn"><i class="fas fa-download"></i> Download</button>
                 </div>
-                <div class="resource-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Community Forum</h3>
-                    <p>Connect with other learners</p>
+                <div class="resource-card" onclick="openResource('project-templates')">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>Project Templates</h3>
+                    <p>Starter templates for your projects</p>
+                    <button class="resource-btn"><i class="fas fa-download"></i> Download</button>
+                </div>
+                <div class="resource-card" onclick="openResource('documentation')">
+                    <i class="fas fa-book"></i>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive PDF documentation</p>
+                    <button class="resource-btn"><i class="fas fa-download"></i> Download</button>
                 </div>
             </div>
         </div>
@@ -595,6 +697,80 @@ async def chat_stream(request: ChatRequest):
         <div class="modal-content">
             <span class="close" onclick="closeService()">&times;</span>
             <div id="serviceDetails"></div>
+        </div>
+    </div>
+
+    <!-- Code Playground Modal -->
+    <div id="playgroundModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closePlayground()">&times;</span>
+            <h2><i class="fas fa-code"></i> Interactive Code Playground</h2>
+            <div class="playground-container">
+                <div class="playground-toolbar">
+                    <select id="languageSelect" class="language-select">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="runCode()">
+                        <i class="fas fa-play"></i> Run Code
+                    </button>
+                    <button class="btn btn-secondary" onclick="clearPlayground()">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+                <div class="playground-editor">
+                    <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
+                </div>
+                <div class="playground-output">
+                    <h3>Output:</h3>
+                    <pre id="codeOutput"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Timer Modal -->
+    <div id="timerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTimer()">&times;</span>
+            <h2><i class="fas fa-clock"></i> Study Timer</h2>
+            <div class="timer-container">
+                <div class="timer-display" id="timerDisplay">00:00:00</div>
+                <div class="timer-controls">
+                    <button class="btn btn-primary" id="startTimerBtn" onclick="startTimer()">
+                        <i class="fas fa-play"></i> Start
+                    </button>
+                    <button class="btn btn-secondary" id="pauseTimerBtn" onclick="pauseTimer()" style="display: none;">
+                        <i class="fas fa-pause"></i> Pause
+                    </button>
+                    <button class="btn btn-danger" onclick="resetTimer()">
+                        <i class="fas fa-stop"></i> Reset
+                    </button>
+                </div>
+                <div class="timer-settings">
+                    <label>Study Goal (minutes):</label>
+                    <input type="number" id="studyGoal" value="60" min="5" max="480" step="5">
+                </div>
+                <div class="timer-stats">
+                    <p>Today: <span id="todayTime">0h 0m</span></p>
+                    <p>This Week: <span id="weekTime">0h 0m</span></p>
+                    <p>Current Streak: <span id="studyStreak">0</span> days</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeQuiz()">&times;</span>
+            <div id="quizContent">
+                <!-- Quiz content will be populated by JavaScript -->
+            </div>
         </div>
     </div>
 
@@ -610,6 +786,7 @@ async def chat_stream(request: ChatRequest):
     <div class="particles" id="particles"></div>
 
     <script src="script.js"></script>
+    <script src="advanced-features.js"></script>
     <script>
         // Create particle effect
         function createParticles() {

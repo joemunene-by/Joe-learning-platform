@@ -145,9 +145,17 @@
                             <li><strong>InVision:</strong> Prototyping and collaboration</li>
                         </ul>
                     </div>
-                    <button class="btn btn-secondary" onclick="downloadNotes('UI/UX Design')" style="margin-top: 1rem;">
-                        <i class="fas fa-download"></i> Download Notes as PDF
-                    </button>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <button class="btn btn-secondary" onclick="downloadNotes('UI/UX Design')">
+                            <i class="fas fa-download"></i> Download Notes as PDF
+                        </button>
+                        <button class="btn btn-primary" onclick="startQuiz('ui-ux')">
+                            <i class="fas fa-question-circle"></i> Take Quiz
+                        </button>
+                        <button class="btn btn-secondary" onclick="searchNotesInPage()">
+                            <i class="fas fa-search"></i> Search Notes
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -171,6 +179,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="advanced-features.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             showRelatedCourses('ui-ux');

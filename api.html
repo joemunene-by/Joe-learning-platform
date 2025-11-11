@@ -108,7 +108,7 @@
 
                 <div class="service-notes-section">
                     <h2><i class="fas fa-book"></i> Comprehensive Learning Notes</h2>
-                    <div class="notes-content">
+                    <div class="notes-content" id="notesContent">
                         <h4>Complete API Development Guide</h4>
                         <p>APIs (Application Programming Interfaces) are the foundation of modern software architecture, enabling different systems, services, and applications to communicate and exchange data. Well-designed APIs are crucial for building scalable, maintainable, and interoperable systems.</p>
                         
@@ -184,6 +184,17 @@
                             <li>Implement proper security measures</li>
                         </ul>
                     </div>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <button class="btn btn-secondary" onclick="downloadNotes('API Development')">
+                            <i class="fas fa-download"></i> Download Notes as PDF
+                        </button>
+                        <button class="btn btn-primary" onclick="startQuiz('api')">
+                            <i class="fas fa-question-circle"></i> Take Quiz
+                        </button>
+                        <button class="btn btn-secondary" onclick="searchNotesInPage()">
+                            <i class="fas fa-search"></i> Search Notes
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,6 +216,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="advanced-features.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            showRelatedCourses('api');
+        });
+    </script>
 </body>
 </html>
 
