@@ -62,7 +62,7 @@ const serviceDetails = {
             title: 'AWS Cloud Full Course - Complete Tutorial',
             duration: '11:30:00',
             description: 'Complete AWS cloud infrastructure tutorial covering all major services',
-            embedId: '3hHmUe1cBaM'
+            embedId: 'k1RI5locZE4'
         },
         notes: `
             <h4>Complete Cloud Infrastructure Guide</h4>
@@ -1135,8 +1135,8 @@ function showAllServices() {
     });
 }
 
-// Advanced Animations
-const observerOptions = {
+// Advanced Animations - Using same observer with different options
+const fadeInObserverOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
@@ -1148,7 +1148,7 @@ const fadeInObserver = new IntersectionObserver((entries) => {
             entry.target.style.transform = 'translateY(0)';
         }
     });
-}, observerOptions);
+}, fadeInObserverOptions);
 
 // Observe all animated elements
 document.querySelectorAll('.service-card, .learning-level, .resource-card').forEach(el => {
@@ -1184,5 +1184,206 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
     }, 100);
+    
+    // Initialize advanced features
+    initThemeToggle();
+    initBookmarks();
+    initProgressTracking();
+    updateBookmarkCount();
 });
+
+// ============================================
+// ADVANCED FEATURES
+// ============================================
+
+// Theme Toggle (Dark/Light Mode)
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    
+    // Apply saved theme
+    if (currentTheme === 'light') {
+        document.body.classList.add('light-theme');
+        if (themeToggle) {
+            themeToggle.querySelector('i').classList.remove('fa-moon');
+            themeToggle.querySelector('i').classList.add('fa-sun');
+        }
+    }
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const isLight = document.body.classList.contains('light-theme');
+            const icon = themeToggle.querySelector('i');
+            
+            if (isLight) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    }
+}
+
+// Bookmarks System
+function initBookmarks() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    serviceCards.forEach(card => {
+        const title = card.querySelector('h3').textContent;
+        const bookmarkBtn = document.createElement('button');
+        bookmarkBtn.className = 'bookmark-icon';
+        bookmarkBtn.innerHTML = '<i class="far fa-bookmark"></i>';
+        bookmarkBtn.title = 'Bookmark this course';
+        
+        // Check if already bookmarked
+        const bookmarks = getBookmarks();
+        if (bookmarks.includes(title)) {
+            bookmarkBtn.querySelector('i').classList.remove('far');
+            bookmarkBtn.querySelector('i').classList.add('fas');
+        }
+        
+        bookmarkBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleBookmark(title, bookmarkBtn);
+        });
+        
+        card.style.position = 'relative';
+        card.appendChild(bookmarkBtn);
+    });
+    
+    // Bookmark section
+    const bookmarkBtn = document.getElementById('bookmarkBtn');
+    if (bookmarkBtn) {
+        bookmarkBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showBookmarksModal();
+        });
+    }
+}
+
+function toggleBookmark(title, btn) {
+    const bookmarks = getBookmarks();
+    const icon = btn.querySelector('i');
+    
+    if (bookmarks.includes(title)) {
+        bookmarks.splice(bookmarks.indexOf(title), 1);
+        icon.classList.remove('fas');
+        icon.classList.add('far');
+    } else {
+        bookmarks.push(title);
+        icon.classList.remove('far');
+        icon.classList.add('fas');
+    }
+    
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    updateBookmarkCount();
+}
+
+function getBookmarks() {
+    const stored = localStorage.getItem('bookmarks');
+    return stored ? JSON.parse(stored) : [];
+}
+
+function updateBookmarkCount() {
+    const countEl = document.getElementById('bookmarkCount');
+    if (countEl) {
+        const count = getBookmarks().length;
+        countEl.textContent = count;
+        countEl.style.display = count > 0 ? 'inline-block' : 'none';
+    }
+}
+
+function showBookmarksModal() {
+    const bookmarks = getBookmarks();
+    if (bookmarks.length === 0) {
+        alert('No bookmarked courses yet! Click the bookmark icon on any course to save it.');
+        return;
+    }
+    
+    let modalHTML = '<div class="bookmarks-modal"><div class="modal-content"><span class="close-modal">&times;</span><h2><i class="fas fa-bookmark"></i> Bookmarked Courses</h2><ul class="bookmarks-list">';
+    
+    bookmarks.forEach(bookmark => {
+        const serviceLink = getServiceLink(bookmark);
+        modalHTML += `<li><a href="${serviceLink}"><i class="fas fa-play-circle"></i> ${bookmark}</a></li>`;
+    });
+    
+    modalHTML += '</ul></div></div>';
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    const modal = document.querySelector('.bookmarks-modal');
+    const closeBtn = document.querySelector('.close-modal');
+    
+    closeBtn.addEventListener('click', () => modal.remove());
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.remove();
+    });
+}
+
+function getServiceLink(title) {
+    const serviceMap = {
+        'Cloud Infrastructure': 'cloud.html',
+        'Mobile Development': 'mobile.html',
+        'Web Development': 'web.html',
+        'Database Solutions': 'database.html',
+        'Security Services': 'security.html',
+        'Analytics & Data': 'analytics.html',
+        'API Development': 'api.html',
+        'DevOps & Automation': 'devops.html'
+    };
+    return serviceMap[title] || 'index.html';
+}
+
+// Progress Tracking
+function initProgressTracking() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    serviceCards.forEach(card => {
+        const title = card.querySelector('h3').textContent;
+        const progress = getProgress(title);
+        
+        if (progress > 0) {
+            const progressBar = document.createElement('div');
+            progressBar.className = 'course-progress';
+            progressBar.innerHTML = `
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: ${progress}%"></div>
+                </div>
+                <span class="progress-text">${progress}% Complete</span>
+            `;
+            card.appendChild(progressBar);
+        }
+    });
+}
+
+function getProgress(courseTitle) {
+    const progress = localStorage.getItem(`progress_${courseTitle}`);
+    return progress ? parseInt(progress) : 0;
+}
+
+function setProgress(courseTitle, percentage) {
+    localStorage.setItem(`progress_${courseTitle}`, percentage.toString());
+}
+
+// Social Sharing
+function shareCourse(title, url) {
+    if (navigator.share) {
+        navigator.share({
+            title: `${title} - Joe's Learning Platform`,
+            text: `Check out this amazing course: ${title}`,
+            url: window.location.origin + '/' + url
+        });
+    } else {
+        // Fallback: Copy to clipboard
+        const shareText = `${title} - ${window.location.origin}/${url}`;
+        navigator.clipboard.writeText(shareText).then(() => {
+            alert('Link copied to clipboard!');
+        });
+    }
+}
 
