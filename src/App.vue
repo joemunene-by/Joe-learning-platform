@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <AppNavbar />
+  <main class="main-content">
+    <RouterView v-slot="{ Component }">
+      <Transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
+  </main>
+  <AppFooter />
+  <ToastNotifications />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppNavbar from './components/layout/Navbar.vue'
+import AppFooter from './components/layout/Footer.vue'
+import ToastNotifications from './components/ui/ToastNotifications.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { AppNavbar, AppFooter, ToastNotifications },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.main-content {
+  flex: 1;
+  padding-top: var(--navbar-height);
 }
 </style>
